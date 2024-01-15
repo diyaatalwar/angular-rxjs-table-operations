@@ -1,0 +1,102 @@
+.body {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.searchBar {
+    text-align: left;
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.editButton {
+    background-color: #3183da;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+.deleteButton {
+    background-color: rgb(201, 68, 68);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination {
+    margin-top: 15px;
+}
+
+.deleteSpan {
+    margin-top: 15px;
+}
+
+.pagination button {
+    background-color: #3183da;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+.pagination button:hover, .pagination button:active {
+    background-color: #45a049;
+}
+
+.deleteSelectedButton {
+    background-color: rgb(201, 68, 68);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+    border-radius: 50px;
+}
+
+/* .selectedPage button:focus {
+    background-color: #45a049;
+} */
+
+.pagination span {
+    margin: 0 5px;
+}
+
+button {
+    padding: 8px 12px;
+}

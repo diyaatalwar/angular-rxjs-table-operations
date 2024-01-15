@@ -1,0 +1,25 @@
+<!-- src/app/edit-modal/edit-modal.component.html -->
+<div class="main">
+    <h2>Edit Item</h2>
+    <form>
+        <!-- Your form fields go here -->
+        <!-- For example, assuming 'data' has 'id', 'name', 'description' properties -->
+        <label>ID:</label>
+        <input [(ngModel)]="data.id" name="id" disabled />
+    
+        <label>Name:</label>
+        <input [(ngModel)]="data.name" name="name" />
+    
+        <label>Email:</label>
+        <input [(ngModel)]="data.email" name="email" />
+    
+        <label>Role:</label>
+        <input [(ngModel)]="data.role" name="role" />
+    
+        <button mat-button color="primary" (click)="onCancelClick()">Cancel</button>
+        <button mat-button color="primary" [mat-dialog-close]="data" cdkFocusInitial>
+            Save
+        </button>
+    </form>
+
+</div>

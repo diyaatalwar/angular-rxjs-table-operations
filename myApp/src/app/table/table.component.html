@@ -1,0 +1,58 @@
+<div class="body">
+    <!-- src/app/table/table.component.html -->
+    
+    <!-- search bar -->
+    <div class="searchBar">
+        <!-- <label for="search">Search:</label> -->
+        <input placeholder="Search..." type="text" id="search" [(ngModel)]="searchTerm" (input)="applySearch()" />
+    </div>
+    
+    <div class="mainTable">
+        <!-- table -->
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        <input type="checkbox" [(ngModel)]="selectAllPage" (change)="selectAllItems()" />
+                    </th>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of getPageData()">
+                    <td>
+                        <input type="checkbox" [(ngModel)]="item.selected" />
+                    </td>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.role }}</td>
+                    <td>
+                        <button class="editButton" (click)="editItem(item)">Edit</button>
+                        <button class="deleteButton" (click)="confirmDeleteItem(item)">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- pagination buttons -->
+    <div class="wrapper">
+        <span class="deleteSpan">
+            <button (click)="deleteItems()" class="deleteSelectedButton"> Delete Selected</button>
+        </span>
+    
+        <span class="pagination">
+            <button (click)="firstPage()">First Page</button>
+            <button (click)="prevPage()">Previous Page</button>
+            <button class="selectedPage" *ngFor="let page of getPages()" (click)="setPage(page)"> {{ page }} </button>
+            <button (click)="nextPage()">Next Page</button>
+            <button (click)="lastPage()">Last Page</button>
+        </span>
+    </div>
+
+</div>
